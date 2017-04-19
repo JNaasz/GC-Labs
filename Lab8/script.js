@@ -83,11 +83,3 @@ var totalPrice = document.createElement('h3');
 totalPrice.innerText = 'Total' + money + total;
 totalPrice.style.border = '2px solid red';
 container.appendChild(totalPrice);
-
-
-
-
-/*var listItemTotal = document.createElement('li');
-listItemTotal.innerText = "Total" + money + total;
-list.appendChild(listItemTotal);
-*/
