@@ -28,58 +28,47 @@ function listItems(){
 
 var container = document.createElement('div');
 container.className = 'container';
+container.style.position = 'absolute';
+container.style.backgroundColor = 'lavender';
+container.style.padding = '10px';
+container.style.width = '525px';
 document.body.appendChild(container);
 
+//Title of Page
 var title = document.createElement('h1');
 title.innerText = 'Shopping Cart';
+title.style.color = 'indigo';
+title.style.margin = '10px';
 container.appendChild(title);
 
+//box for list items
 var list = document.createElement('ul');
-list.style.border = '2px solid black';
+list.style.border = '2px solid darkSlateBlue';
+list.style.margin = '10px';
+list.style.listStyleType = 'circle';
+list.style.width = 'auto';
 container.appendChild(list);
 
 var money = ": $";
-var listItem0 = document.createElement('li');
-listItem0.innerText = cart[0].name + money + cart[0].price;
-list.appendChild(listItem0);
 
-var listItem1 = document.createElement('li');
-listItem1.innerText = cart[1].name + money + cart[1].price;
-list.appendChild(listItem1);
+//Shopping List of items and price
+cart.forEach(function (i){
+var spot = ''
+  var listItem = document.createElement('li');
+  listItem.innerText = i.name + ":           "  + " $" + i.price ;
+  list.appendChild(listItem);
+  listItem.style.padding = '5px';
+})
 
-var listItem2 = document.createElement('li');
-listItem2.innerText = cart[2].name + money + cart[2].price;
-list.appendChild(listItem2);
-
-var listItem3 = document.createElement('li');
-listItem3.innerText = cart[3].name + money + cart[3].price;
-list.appendChild(listItem3);
-
-var listItem4 = document.createElement('li');
-listItem4.innerText = cart[4].name + money + cart[4].price;
-list.appendChild(listItem4);
-
-var listItem5 = document.createElement('li');
-listItem5.innerText = cart[5].name + money + cart[5].price;
-list.appendChild(listItem5);
-
-var listItem6 = document.createElement('li');
-listItem6.innerText = cart[6].name + money + cart[6].price;
-list.appendChild(listItem1);
-
-var listItem7 = document.createElement('li');
-listItem7.innerText = cart[7].name + money + cart[7].price;
-list.appendChild(listItem7);
-
-var listItem8 = document.createElement('li');
-listItem8.innerText = cart[8].name + money + cart[8].price;
-list.appendChild(listItem8);
-
-var listItem9 = document.createElement('li');
-listItem9.innerText = cart[9].name + money + cart[9].price;
-list.appendChild(listItem9);
-
-var totalPrice = document.createElement('h3');
-totalPrice.innerText = 'Total' + money + total;
-totalPrice.style.border = '2px solid red';
+//Total box at bottom of page
+var totalPrice = document.createElement('h4');
+totalPrice.innerText = "Total:"  + "  $" + total;
+totalPrice.style.border = '2px solid blue';
+totalPrice.style.color = 'lightSeaBlue';
+totalPrice.style.width = '150px';
+totalPrice.style.padding = "10px";
+totalPrice.style.textAlign = 'center';
+totalPrice.style.margin = '10px';
+totalPrice.style.float = 'right';
+totalPrice.style.backgroundColor = 'mediumPurple';
 container.appendChild(totalPrice);
