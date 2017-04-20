@@ -131,8 +131,10 @@ itemForm.appendChild(click);
 //................................................ADD ITEM OBJECT TO CART ARRAY
 function addToCart(item , price1){
   item = document.getElementById('inItem').value ; //This and
-  price1 = document.getElementById('inPrice').value; //This are wrong
+  price1 = Number document.getElementById('inPrice').value; //This are wrong
   var newItemCombo = { name: item , price: price1};
   cart.push(newItemCombo);
   console.log(cart);
 }
+//
+//var newLine = document. -may need to create a new li for the funciton
