@@ -1,6 +1,6 @@
 var total = 0
  var cart = [
-   { name: "milk", price: 2.40},
+   { name: "milk", price: 2.42},
    { name: "eggs", price: 1.88},
    { name: "strawberries" , price: 2.06},
    { name: "ramen noodles", price: 0.25},
@@ -26,24 +26,24 @@ function listItems(){
    })
 }
 
-//TOTAL PAGE CONTAINER
+//................................................TOTAL PAGE CONTAINER
 var container = document.createElement('div');
 container.className = 'container';
 container.style.position = 'absolute';
 container.style.backgroundColor = 'lavender';
 container.style.padding = '10px';
-container.style.width = '525px';
+container.style.width = '480px';
 document.body.appendChild(container);
 
-//Title of Page
+//........................................................ Title of Page
 var title = document.createElement('h1');
-title.innerText = 'Shopping Cart';
+title.innerText = 'Shopping List';
 title.style.fontFamily = 'cursive';
 title.style.color = 'indigo';
 title.style.margin = '10px';
 container.appendChild(title);
 
-//box for list items
+// ......................................................box for list items
 var list = document.createElement('ul');
 list.style.border = '2px solid darkSlateBlue';
 list.style.margin = '10px';
@@ -53,17 +53,16 @@ container.appendChild(list);
 
 var money = ": $";
 
-//Shopping List of items and price
+// ..........................................Shopping List of items and price
 cart.forEach(function (i){
-var spot = ''
   var listItem = document.createElement('li');
-  listItem.innerText = i.name + ":           "  + " $" + i.price ;
+  listItem.innerText = i.name + ": "  + " $" + i.price ;
   list.appendChild(listItem);
   listItem.style.fontFamily = 'cursive';
   listItem.style.padding = '5px';
 })
 
-//Total box at bottom of page
+//................................................Total box at bottom of page
 var totalPrice = document.createElement('h4');
 totalPrice.innerText = "Total:"  + "  $" + total;
 totalPrice.style.border = '2px solid blue';
@@ -77,12 +76,12 @@ totalPrice.style.fontFamily = 'cursive';
 totalPrice.style.backgroundColor = 'mediumPurple';
 container.appendChild(totalPrice);
 
-//FORM FOR ADDING TO ARRAY
+//....................................................FORM FOR ADDING TO ARRAY
 var inputContainer = document.createElement('fieldset');
 inputContainer.style.fontFamily = 'cursive';
 inputContainer.style.marginLeft = '10px';
-inputContainer.style.marginTop = '10px';
-inputContainer.style.padding = '10px';
+inputContainer.style.margin = '10px';
+//inputContainer.style.padding = '10px';
 inputContainer.style.border = '2px solid darkSlateBlue';
 container.appendChild(inputContainer);
 
@@ -91,11 +90,12 @@ legend.innerText = 'Add Item To List';
 legend.fontFamily = 'cursive';
 inputContainer.appendChild(legend);
 
+//...........................................................Start Input Form
 var itemForm = document.createElement('form');
 itemForm.onsubmit = 'addToCart()';
 inputContainer.appendChild(itemForm);
 
-//         itemLabel.htmlFor = 'inItem';
+//      ........................................ itemLabel.htmlFor = 'inItem';
 var itemLabel = document.createElement('label');
 itemLabel.innerText = 'Item: ';
 itemForm.appendChild(itemLabel);
@@ -106,25 +106,33 @@ putInItem.id = 'inItem';
 putInItem.style.width = "150px";
 itemForm.appendChild(putInItem);
 
-//        itemLabel.htmlFor = inPricetem;
-var itemLabel2 = document.createElement('label');
-itemLabel2.innerText = 'Price: ';
-inputContainer.appendChild(itemLabel2);
+linebreak = document.createElement('br');
+itemForm.appendChild(linebreak);
+
+// ...........................................itemLabel.htmlFor = inPricetem;
+var priceLabel = document.createElement('label');
+priceLabel.innerText = 'Price: ';
+itemForm.appendChild(priceLabel);
 
 var putInPrice = document.createElement('input');
 putInPrice.type = "text";
 putInPrice.id = 'inPrice';
 putInPrice.style.width = "150px";
-inputContainer.appendChild(putInPrice);
+itemForm.appendChild(putInPrice);
 
-//      SUBMIT BUTTON
-var click = document.createElement('button');
-click.innerText = 'Add';
-//click.onsubmit = 'addToCart()'
-inputContainer.appendChild(click);
+//...............................................................ADD BUTTON
+var click = document.createElement('input');
+//click.onsubmit = 'addToCart()';
+click.type = 'submit';
+click.value = 'Add';
+click.style.marginLeft = '5px';
+itemForm.appendChild(click);
 
+//................................................ADD ITEM OBJECT TO CART ARRAY
 function addToCart(item , price1){
+  item = document.getElementById('inItem').value ; //This and
+  price1 = document.getElementById('inPrice').value; //This are wrong
   var newItemCombo = { name: item , price: price1};
   cart.push(newItemCombo);
-  return cart;
+  console.log(cart);
 }
