@@ -1,21 +1,30 @@
 body {
-  background: linear-gradient(to bottom right,#f1daf1, #b30059);
+  background: linear-gradient(to bottom right,#033e80, #018b07);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center center;
   }
+
+  @font-face {
+    font-family: Cheddar;
+    src: url(fonts/Cheddar.ttf);
+}
+
 
   #topbox {
     text-align: center;
     width: 100%;
-    margin: 20px;
-    color: #006630;
-    font-family: cursive;
+    margin: 15px;
+    color: #92d465;
+    font-family: Cheddar, cursive;
+    font-size: 28pt ;
+    padding-top: 8px;
   }
 
-  p {
-    color: #006630;
-  font-family: cursive;
+  #announce {
+  color: #92d465;
+  font-family: Cheddar, cursive;
+  font-size: 120%;
+  margin-bottom: 100px;
   }
 
   #radius {
@@ -26,5 +35,32 @@ body {
   }
 
 #circle {
-  background: radial-gradient(#ccccff, #b0a394, #009947);
+  background-image: url("images/globe.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+  transition: transform 6s;
+}
+
+#circle:hover {
+  transform: rotate(1080deg) scale(.5);
+}
+
+#leaves {
+  background-image: url("images/leaves.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+  height: 600px;
+  }
+
+#happy {
+  font-size: 200%;
+  font-family: Cheddar, cursive;
+  color: #92d465;
+  float: bottom;
+  text-align: center;
+  width: 100%;
+  margin-top:40px;
 }
