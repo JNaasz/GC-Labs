@@ -1,0 +1,30 @@
+body {
+  background: linear-gradient(to bottom right,#f1daf1, #b30059);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  }
+
+  #topbox {
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+    color: #006630;
+    font-family: cursive;
+  }
+
+  p {
+    color: #006630;
+  font-family: cursive;
+  }
+
+  #radius {
+    background: linear-gradient(to right, #818d92 , #e6e6e6);
+    color: white;
+    width: 40px;
+    text-align: center;
+  }
+
+#circle {
+  background: radial-gradient(#ccccff, #b0a394, #009947);
+}

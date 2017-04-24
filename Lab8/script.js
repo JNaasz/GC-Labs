@@ -102,7 +102,7 @@ itemForm.appendChild(itemLabel);
 
 var putInItem = document.createElement('input');
 putInItem.type = "text";
-putInItem.id = 'inItem';
+putInItem.setAttribute("id" , "inItem");
 putInItem.style.width = "150px";
 itemForm.appendChild(putInItem);
 
@@ -116,15 +116,14 @@ itemForm.appendChild(priceLabel);
 
 var putInPrice = document.createElement('input');
 putInPrice.type = "text";
-putInPrice.id = 'inPrice';
+putInPrice.setAttribute("id" , "inPrice");
 putInPrice.style.width = "150px";
 itemForm.appendChild(putInPrice);
 
 //...............................................................ADD BUTTON
-var click = document.createElement('input');
+var click = document.createElement('button');
 //click.onsubmit = 'addToCart()';
-click.type = 'submit';
-click.value = 'Add';
+click.innerText = 'Add';
 click.style.marginLeft = '5px';
 itemForm.appendChild(click);
 
