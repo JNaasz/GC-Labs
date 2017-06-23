@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>To Do</title>
+  </head>
+  <body ng-app="myModule">
+
+    <div class="col1" ng-controller="groceryController">
+      <ul id="groceryListPrint">
+         <li  ng-repeat="item in groceries track by $index">
+           <input src="x.png" type="image" ng-click="removeItem(item)"><label>{{item.item+": " + (item.price | currency)}}</label>
+         </li>
+      </ul>
+    <form id="groceryInput">
+      <input type="text" ng-model="name" placeholder="Grocery Item"></br>
+      <input type="text" ng-model="price" placeholder="Item Price">
+      <button type="button" ng-click="addItem()">Add Item</button>
+    </form>
+    <h2>Grocery List</h2>
+    </div>
+
+    <div class="col2" ng-controller="choreController">
+      <h2>To-Do List</h2>
+      <div id="doListPrint">
+        <ul>
+          <li ng-repeat="chore in choreList track by $index">
+            <input src="x.png" type="image" ng-click="removeChore(i)"><label>{{chore}}</label>
+          </li>
+        </ul>
+      </div>
+    <form id="choreInputs">
+      <input type="text" ng-model="chore">
+      <button type="button" ng-click="addChore()">Add Task</button>
+    </form>
+    </div>
+
+
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  </body>
+</html>

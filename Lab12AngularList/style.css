@@ -1,0 +1,91 @@
+body {
+  position: relative;
+}
+
+.col1 {
+  background-image: url(bag.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 480px;
+  width: 330px;
+  padding: 30px;
+  margin-left: 30px;
+}
+
+.col1 h2 {
+  text-align: center;
+}
+
+.col1 ul {
+  list-style: none;
+}
+
+#groceryListPrint input {
+  width: 10px;
+  margin: 0px 5px;
+}
+
+#groceryListPrint {
+  height: 300px;
+  width: 270px;
+  padding-top: 160px;
+  padding-left: 150px;
+}
+
+.col2 {
+  background-image: url(note.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 130px;
+  left: 520px;
+  height: 400px;
+  width: 330px;
+  padding: 30px;
+  padding-bottom: 78px;
+  font-size: 120%;
+  }
+
+  .col2 h2 {
+    text-align: center;
+    margin-top: -80px;
+  }
+
+  #doListPrint {
+    height: 400px;
+    width: 270;
+    padding-left: 40px;
+    padding-top: 55px;
+    line-height: 105%;
+    font-size: 120%;
+  }
+
+  #doListPrint input {
+    width: 12px;
+    margin: 0px 5px;
+  }
+
+#choreInputs {
+  text-align: center;
+  margin-left: 40px;
+}
+
+#groceryInput {
+  text-align: left;
+  margin-left: 140px;
+}
+
+#groceryInput button {
+  margin-left: 50px;
+}
+
+input {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.cross {
+  text-decoration: line-through;
+}
